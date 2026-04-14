@@ -1,140 +1,179 @@
-:root {
-  --primary: #0f2a44;
-  --accent: #f7931e;
-  --bg: #ffffff;
-  --muted: #6b7280;
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+    --bg:#000;
+    --accent:#fff;
+    --muted:#aaa;
+    --border:rgba(255,255,255,0.1)
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--accent);
+    line-height:1.6;
+    padding-top:80px;
+    overflow-x:hidden
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--primary);
-  line-height: 1.6;
-  text-align: center;
+h1,h2,h3,.nav-links a,.section-label{
+    font-family:'Cinzel',serif;
+    text-transform:uppercase;
+    letter-spacing:3px
 }
 
-.site-header {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1.4rem 1.5rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
+nav{
+    position:fixed;
+    width:100%;
+    height:80px;
+    top:0;
+    background:rgba(0,0,0,0.9);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid var(--border)
 }
 
-.logo {
-  height: 180px;
-  width: auto;
-  display: block;
+.nav-container{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    max-width:1100px;
+    margin:auto;
+    padding:0 24px;
+    width:100%
 }
 
-nav {
-  display: flex;
-  gap: 2rem;
+.nav-links{
+    display:flex
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 500;
+.nav-links a{
+    color:var(--accent);
+    text-decoration:none;
+    font-size:11px;
+    margin-left:30px;
+    transition:.3s
 }
 
-nav a:hover {
-  color: var(--accent);
+.nav-links a:hover{
+    color:var(--muted)
 }
 
-.hero {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
+.hero-section{
+    position:relative;
+    height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
+.hero-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    /* FIXED IMAGE PATH */
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url('vidyutra_banner.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
-.hero span {
-  color: var(--accent);
+.hero-content{
+    position:relative;
+    z-index:2
 }
 
-.hero p {
-  margin-top: 1.2rem;
-  font-size: 1.1rem;
-  color: var(--muted);
+.hero-section h1{
+    font-size:4rem
 }
 
-section {
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
+.tagline{
+    font-size:14px;
+    color:var(--muted)
 }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+section{
+    padding:80px 0
 }
 
-section p {
-  color: var(--muted);
-  margin-bottom: 1rem;
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:0 24px
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px
 }
 
-.card {
-  background: #fafafa;
-  padding: 1.8rem;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
+h2{
+    font-size:16px;
+    margin-bottom:20px;
+    border-bottom:1px solid var(--border)
 }
 
-footer {
-  border-top: 1px solid #e5e7eb;
-  padding: 2.5rem 1.5rem;
+p{
+    font-size:14px;
+    color:var(--muted)
 }
 
-.footer-inner {
-  max-width: 1000px;
-  margin: auto;
+.section-label{
+    display:block;
+    text-align:center;
+    margin-bottom:40px;
+    font-size:12px
 }
 
-.social {
-  margin-bottom: 1rem;
+.ventures{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px
 }
 
-.social a {
-  margin: 0 0.75rem;
-  text-decoration: none;
-  color: var(--primary);
+.venture-card{
+    border:1px solid var(--border);
+    padding:45px 30px;
+    text-decoration:none;
+    color:inherit;
+    transition:.4s
 }
 
-.social a:hover {
-  color: var(--accent);
+.venture-card:hover{
+    transform:translateY(-8px);
+    background:#0a0a0a;
+    border-color:#555
 }
 
-@media (max-width: 640px) {
-  .logo {
-    height: 90px;
-  }
+footer{
+    padding:60px 0;
+    border-top:1px solid var(--border);
+    text-align:center
+}
 
-  .hero h1 {
-    font-size: 2.1rem;
-  }
+footer p{
+    font-size:12px
+}
 
-  nav {
-    gap: 1.5rem;
-  }
+@media(max-width:768px){
+    .grid{
+        grid-template-columns:1fr
+    }
+
+    .nav-links{
+        display:none
+    }
+
+    .hero-section h1{
+        font-size:2.5rem
+    }
 }
