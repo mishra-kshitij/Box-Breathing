@@ -1,4 +1,4 @@
-# Vidyutra — Web Platform & Innovation Hub
+# Vidyutra LLP
 
 This repository contains the source code for the **Vidyutra** website, a lightweight static platform hosted via **GitHub Pages**.
 
