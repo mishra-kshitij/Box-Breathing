@@ -1,6 +1,6 @@
 # Vidyutra LLP
 
-This repository contains the source code for the **Vidyutra** website, a lightweight static platform hosted via **GitHub Pages**.
+This repository contains the source code for the **Vidyutra** website, a lightweight static platform.
 
 The site serves as a fast, minimal, and scalable foundation for showcasing work across electronics, communication technology, and digital innovation.
 
@@ -29,7 +29,6 @@ Vidyutra is a technology initiative with a focused and minimal online presence, 
 ├── styles.css              # Global styles
 ├── robots.txt              # Search engine directives
 ├── sitemap.xml             # Sitemap for SEO
-├── CNAME                   # Custom domain configuration
 │
 ├── vidyutra_banner.png     # Website banner
 ├── vidyutra_logo.jpg       # Logo (JPG)
